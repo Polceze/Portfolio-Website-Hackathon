@@ -25,24 +25,40 @@
         <!-- CSS Imports -->
         <link rel="stylesheet" href="styles/base.css">
         <link rel="stylesheet" href="styles/components.css">
-        <link rel="stylesheet" href="styles/layouts.css">
+        <link rel="stylesheet" href="styles/nav-bar.css">
         <link rel="stylesheet" href="styles/utilities.css">
     </head>
      <body id="top">
 
         <!-- Main header and navigation -->
-        <header>
-            <h1>Portfolio? Nah, this is Paul-folio.</h1>
+        <header class="sticky-nav">
+            <div class="brand">
+                <a href=".">
+                    <img src="assets/Paul-logo.png" alt="paul logo" height="65" width="65">
+                </a>
+            </div>
 
             <!-- Primary navigation links -->
-            <nav role="navigation" aria-label="Main navigation">
-                <ul>
-                    <li><a href=".">Home</a></li>
+            <nav role="navigation" class="main-nav" aria-label="Main navigation">
+
+                <!-- Making Contacts button always visible -->
+                <a href="#contacts-heading" class="contact-button">Contact Me</a></li>
+
+                <!-- Creating a hamburger menu -->
+                <input type="checkbox" id="hamburger-toggle" class="hamburger-checkbox">
+                <label for="hamburger-toggle" class="hamburger" aria-expanded="false" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <!-- the dropdown menu hidden by the humbuger button -->
+                <ul class="navigation-menu">
                     <li><a href="#skills-heading">Skills</a></li>
                     <li><a href="#projects-heading">Projects</a></li>
                     <li><a href="#education-heading">Education</a></li>
                     <li><a href="#hobbies-heading">Hobbies</a></li>
-                    <li><a href="#testimonials-heading">Testimonials</a></li>
+                    <li><a href="#testimonials-heading">Testimonials</a></li>                    
                 </ul>
             </nav>
         </header>
@@ -51,8 +67,10 @@
         <main role="main">
             <!-- Section 1. Introduction/About Me -->
             <section aria-labelledby="intro-heading">
-                <h2 id="intro-heading">Intro</h2>
-                <h3>Who's this guy?</h3>
+                <h2 id="intro-heading"></h2>
+                <h1>Portfolio?</h1>
+                <h1>Nah, this is Paul-folio.</h1>
+                <h3>Who am I, you ask?</h3>
                 <p>
                     Hi, I’m Paul - a Kenyan full-stack software engineer based right here in Kenya. I’m soft-spoken, 
                     easy to get along with, but don’t let that fool you. I’m sharp, creative, and deadly serious when it 
@@ -159,4 +177,3 @@
             <p><small>&copy; 2025 Paul Ochieng. Built with HTML & CSS for PLP</small></p>
         </footer>
     </body>
-</html>

@@ -1,0 +1,135 @@
+/* making navigation bar stick to top and glass effect */
+.sticky-nav 
+    {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1.5rem;
+        backdrop-filter: blur(16px);
+        background: rgba(255, 255, 255, 0.5); /* translucent dark glass */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+/* Logo alignment */
+.brand img 
+    {
+        display: block;
+    }
+
+/* Contact me button position */
+.main-nav 
+    {
+        display: flex;
+        align-items: center;
+        gap: 8rem;
+    }
+
+/* Contact Me button appearance */
+.contact-button 
+    {
+        padding: 0.6rem 1.2rem;
+        background: linear-gradient(to right, #4f46e5, #9333ea);
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-weight: normal;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-decoration: none;
+    }
+
+/* Hamburger menu layout */
+.hamburger-checkbox 
+    {
+        display: none;
+    }
+
+.hamburger
+    {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+        margin-left: 1rem;
+    }
+
+/* Hamburger appearance */
+.hamburger span 
+    {
+        display: block;
+        width: 24px;
+        height: 3px;
+        background-color: #e03e32;
+        border-radius: 2px;
+    }
+
+/* Dropdown menu */
+.navigation-menu 
+    {
+    position: absolute;
+    top: 70px;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    padding: 1rem;
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition:
+        max-height 0.4s ease,
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0.3s ease;
+    }
+
+/* Show dropdown when hamburger is clicked */
+.hamburger-checkbox:checked + .hamburger + .navigation-menu 
+    {
+        max-height: 500px; 
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+/* Navigation items */
+.navigation-menu li 
+    {
+        margin: 0.8rem 0;
+    }
+
+.navigation-menu li a 
+    {
+        display: block;
+        padding: 0.1rem;
+        color: #000000;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s ease-in-out;
+        border-radius: 4px;
+    }
+
+.navigation-menu li a:hover 
+    {
+        color: #caa2ca;
+    }
+
+.hamburger-checkbox:checked + .hamburger span:nth-child(1) 
+{
+    transform: rotate(45deg) translate(10px, 10px);
+}
+.hamburger-checkbox:checked + .hamburger span:nth-child(2) 
+{
+    opacity: 0;
+}
+.hamburger-checkbox:checked + .hamburger span:nth-child(3) 
+{
+    transform: rotate(-45deg) translate(10px, -10px);
+}
