@@ -29,6 +29,7 @@
         <link rel="stylesheet" href="styles/skills-styles.css">
         <link rel="stylesheet" href="styles/projects-styles.css">
         <link rel="stylesheet" href="styles/education-styles.css">
+        <link rel="stylesheet" href="styles/testimonials-styles.css">
     </head>
     <body id="top">
 
@@ -166,18 +167,52 @@
                     <div class="section-content">
                         <h2 id="testimonials-heading">Testimonials</h2>
                         <h3>Don’t just take my word for it</h3>
-                        <p>
-                            What do my colleagues, clients, and collaborators say about me? Scroll through and hear it straight from them.
-                        </p>
+                        <p>Here's what my peers and colleagues are saying</p>
+                        <div class="testimonials-container">
+                            <div class="testimonials-track">
+
+                                <!-- testimonial 1-->
+                                <div class="testimonials-card">
+                                    <img src="assets/John-Doe.PNG" alt="John Doe photo", class="testimonial-avatar">
+                                    <blockquote>
+                                        <p>
+                                            "Paul came through for us with some amazing code, He's awesome, trust me"
+                                        </p>
+                                        <footer>John Doe, <cite>Big Guy Somewhere</cite></footer>
+                                    </blockquote>
+                                </div>
+
+                                <!-- testimonial 2-->
+                                <div class="testimonials-card">
+                                    <img src="assets/Jane-Smith.jpg" alt=" Jane Smith photo", class="testimonial-avatar">
+                                    <blockquote>
+                                        <p>
+                                            "Paul's is the best, he solved some real complicated issue we had. He's the best, I guarantee it"
+                                        </p>
+                                        <footer>Jane Smith, <cite>Big Shot CEO</cite></footer>
+                                    </blockquote>
+                                </div>
+
+                                <!-- duplicating testimonial 1 for seamless looping -->
+                                <div class="testimonials-card">
+                                    <img src="assets/John-Doe.PNG" alt="John Doe photo", class="testimonial-avatar">
+                                    <blockquote>
+                                        <p>
+                                            "Paul came through for us with some amazing code, He's awesome, trust me"
+                                        </p>
+                                        <footer>John Doe, <cite>Big Guy Somewhere</cite></footer>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
                     </div>                    
                 </section>
 
-                <!-- Section 7. My contacts -->
+                <!-- Section 6. My contacts -->
                 <section aria-labelledby="contacts-heading">
                     <div class="section-content">
-                        <h2 id="contacts-heading">Contacts</h2>
+                        <p id="contacts-heading">Got a project, opportunity, or just want to say hi?</p>
                         <h3>Let’s talk, drop me a line</h3>
-                        <p>Got a project, opportunity, or just want to say hi? Reach out!</p>
                         
                         <!-- Contact Form -->
                         <form 
@@ -236,6 +271,7 @@
                 <nav>
                     <a href="assets/Paul_Ochieng_CV.pdf" download title="Download my CV (PDF)">📄 Download My CV</a> &nbsp;&nbsp;|&nbsp;&nbsp;
                     <a href="." title="Scroll to the top">Home</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="#contacts-heading" title="Scroll to contact form">Contact me</a> &nbsp;&nbsp;|&nbsp;&nbsp;
                     <a href="#skills-heading" title="Scroll to Skills">Skills</a> &nbsp;&nbsp;|&nbsp;&nbsp;
                     <a href="#projects-heading" title="Scroll to Projects">Projects</a> &nbsp;&nbsp;|&nbsp;&nbsp;
                     <a href="#education-heading" title="Scroll to Education">Education</a> &nbsp;&nbsp;|&nbsp;&nbsp;
