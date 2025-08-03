@@ -1,7 +1,6 @@
-
 :root 
 {
-  --header-height: 100px; /* Setting header height confirmed from "inspect" */
+  --header-height: 98px; /* Setting header height confirmed from "inspect" */
 }
 
 /* Sticky Navbar (Glass Effect) */
