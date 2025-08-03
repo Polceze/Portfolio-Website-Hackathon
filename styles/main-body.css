@@ -30,7 +30,7 @@ section
 
 /* First Section Special Treatment */
 section:first-of-type {
-  padding-top: calc(var(--header-height, 98px) + 5vw); /* Extra space if needed */
+  padding-top: calc(var(--header-height, 98px) + 5px); /* Extra space if needed */
 }
 
 /* Content Wrapping for better alignment */
@@ -117,7 +117,7 @@ footer
   position: sticky;
   bottom: 0;
   padding: 0.8rem 1vw; /* vertical padding */
-  background-color: rgba(29, 27, 27, 0.1);
+  background-color: rgba(29, 27, 27, 0);
   text-align: center;
   box-sizing: border-box;
   max-width: 1600px;
@@ -128,7 +128,7 @@ footer
   align-items: center;
   justify-content: center;
   border-radius: 8px 8px 0 0; /* Softened top corners */
-  backdrop-filter: blur(3px); /* Glass effect */
+  backdrop-filter: blur(20px); /* Glass effect */
   z-index: 50;
 }
 

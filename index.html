@@ -25,8 +25,10 @@
         <!-- CSS Imports -->
         <link rel="stylesheet" href="styles/nav-bar.css">
         <link rel="stylesheet" href="styles/main-body.css">
-        <link rel="stylesheet" href="styles/intro-sec-styles.css">
-        <link rel="stylesheet" href="styles/skills-sec-styles.css">
+        <link rel="stylesheet" href="styles/intro-styles.css">
+        <link rel="stylesheet" href="styles/skills-styles.css">
+        <link rel="stylesheet" href="styles/projects-styles.css">
+        <link rel="stylesheet" href="styles/education-styles.css">
     </head>
     <body id="top">
 
@@ -57,7 +59,6 @@
                     <li><a href="#skills-heading">Skills</a></li>
                     <li><a href="#projects-heading">Projects</a></li>
                     <li><a href="#education-heading">Education</a></li>
-                    <li><a href="#hobbies-heading">Hobbies</a></li>
                     <li><a href="#testimonials-heading">Testimonials</a></li>                    
                 </ul>
             </nav>
@@ -118,53 +119,49 @@
                 <!-- Section 3. Projects Portfolio -->
                 <section aria-labelledby="projects-heading" class="visible">
                     <div class="section-content">
-                        <h2 id="projects-heading">Projects</h2>
-                        <h3>What have I built?</h3>
-                        <p>
-                            From side projects that scratched a curiosity itch to full-on applications that solved real problems, I’ve been busy. I’ve grown 
-                            from junior dev to someone who can plan, build, and ship solid products end-to-end. Take a scroll through my <a href="https://github.com/Polceze" 
-                            target="_blank" rel="noopener" title="Open my Github on a new tab">GitHub</a> - there’s a bit of everything: clean code, clever 
-                            solutions, and more than a few late nights behind it all.
-                        </p>
+                        <div class="projects-grid">
+                            <div class="projects-text">
+                                <h2 id="projects-heading">What have I built?</h2>
+                                <p>
+                                    From side projects that scratched a curiosity itch to full-on applications that solved real problems, I’ve been busy. I’ve grown 
+                                    from junior dev to someone who can plan, build, and ship solid products end-to-end. 
+                                </p>
+                                <p>Take a scroll through my <a href="https://github.com/Polceze" 
+                                    target="_blank" rel="noopener" title="Open my Github on a new tab">GitHub</a> - there’s a bit of everything: clean code, clever 
+                                    solutions, and more than a few late nights behind it all.
+                                </p>
+                            </div>
+                            <div class="projects-image">
+                                <img src="assets/programming.gif" alt="funny programming gif">
+                            </div>
+                        </div>    
                     </div>                    
                 </section>
 
                 <!-- Section 4. Educational Background -->
                 <section aria-labelledby="education-heading" class="visible">
                     <div class="section-content">
-                        <h2 id="education-heading">Education</h2>
-                        <h3>From Physics to Full Stack</h3>
-                        <p>
-                            Would you believe I didn’t study software development in university? 
-                            I hold a BSc. in Physics from JKUAT. My pivot into tech came through the <a href="https://www.powerlearnprojectafrica.org" 
-                            target="_blank" rel="noopener" title="Open Power Learn Project Africa website">PLP (Power Learn Project)</a> Software Engineering Scholarship - and 
-                            that decision changed everything. Since then, I’ve been deep in this world: learning, building, breaking stuff (on purpose), and building again.
-                        </p>
+                        <div class="education-grid">
+                            <div class="education-text">
+                                <h2 id="education-heading">Education: From Physics to Full Stack</h2>
+                                <p>
+                                    Would you believe I didn’t study software development in university? 
+                                    I hold a BSc. in Physics from JKUAT. 
+                                </p>
+                                <P>    
+                                    My pivot into tech came through the <a href="https://www.powerlearnprojectafrica.org" 
+                                    target="_blank" rel="noopener" title="Open Power Learn Project Africa website">PLP (Power Learn Project)</a> Software Engineering Scholarship - and 
+                                    that decision changed everything. Since then, I’ve been deep in this world: learning, building, breaking stuff (on purpose), and building again.
+                                </p>
+                            </div>
+                            <div class="education-image">
+                                <img src="assets/open-door.jpg">
+                            </div>
+                        </div>    
                     </div>                    
                 </section>
 
-                <!-- Section 5. Personal Interests -->
-                <section aria-labelledby="hobbies-heading" class="visible">
-                    <div class="section-content">
-                        <h2 id="hobbies-heading">Hobbies</h2>
-                        <h3>When I’m not coding...</h3>
-                        <p>All work and no play? Not me. Here’s how I keep life interesting:</p>
-                            <ul>
-                                <li><strong>Road trips</strong> – I love to drive. For me, a vacation starts when the engine turns on, not when I arrive.</li>
-                                <li><strong>Amateur piano</strong> – Self-taught and powered by instinct. I build chords by ear and it’s one of the most rewarding things I do.</li>
-                                <li>
-                                    <strong>Curious browsing</strong> – I’m a YouTube deep diver. I’m into anything that questions what we think we know - from mind-bending theories 
-                                    to the “Was the moon landing faked?” kind of debates. I don’t always believe them, but I’m always curious.
-                                </li>
-                            </ul>
-                        <p>
-                            As you might’ve noticed, these hobbies aren’t just fun, they help me reset and come back to work with fresh ideas. They’ve taught me patience, creativity, 
-                            the value of consistent practice, and the habit of questioning common solutions - all of which come in handy when I’m deep in code, solving tough problems.
-                        </p>
-                    </div>                        
-                </section>
-
-                <!-- Section 6. Testimonials from peers -->
+                <!-- Section 5. Testimonials from peers -->
                 <section aria-labelledby="testimonials-heading" class="visible">
                     <div class="section-content">
                         <h2 id="testimonials-heading">Testimonials</h2>
@@ -242,7 +239,6 @@
                     <a href="#skills-heading" title="Scroll to Skills">Skills</a> &nbsp;&nbsp;|&nbsp;&nbsp;
                     <a href="#projects-heading" title="Scroll to Projects">Projects</a> &nbsp;&nbsp;|&nbsp;&nbsp;
                     <a href="#education-heading" title="Scroll to Education">Education</a> &nbsp;&nbsp;|&nbsp;&nbsp;
-                    <a href="#hobbies-heading" title="Scroll to Hobbies">Hobbies</a> &nbsp;&nbsp;|&nbsp;&nbsp;
                     <a href="#testimonials-heading" title="Scroll to Testimonials">Testimonials</a> &nbsp;&nbsp;|&nbsp;&nbsp;
                     <a href="https://academy.powerlearnprojectafrica.org" title="Open PLP Academy website on a new tab" target="_blank" rel="noopener">PLP Academy</a>
                 </nav>

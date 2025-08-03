@@ -1,0 +1,104 @@
+/* ===== SECTION LAYOUTS ===== */
+/* Intro Section - Text + Image Grid */
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.intro-text {
+  max-width: 600px;
+  animation: fadeInLeft 0.8s ease-out; /* animation */
+}
+
+/* HEADER TYPOGRAPHY */
+.intro-text h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 0.5rem 0;
+  color: #f0f0f0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* First title - Larger with Accent */
+.intro-text h1:first-of-type {
+  font-size: clamp(2.5rem, 5vw, 4rem); /* Responsive sizing */
+  background: linear-gradient(to right, #4f46e5, #9333ea);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+/* Second title - Subdued Contrast */
+.intro-text h1:last-of-type {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #e0e0e0;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+/* Adding decorative element to second H1 */
+.intro-text h1:last-of-type::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60%;
+  width: 4px;
+  background: linear-gradient(to bottom, #4f46e5, #9333ea);
+  border-radius: 2px;
+}
+
+/* Paragraph spacing */
+.intro-text p {
+  margin-top: 1.5rem;
+  max-width: 90%;
+}
+
+.intro-image {
+  display: flex;
+  justify-content: center;
+  animation: fadeInRight 0.8s ease-out; 
+}
+
+.intro-image img {
+  max-width: 280px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.intro-image img:hover {
+  transform: scale(1.02);
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 768px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-image {
+    justify-content: center;
+    margin-top: 1.5rem;
+    order: -1; /* Optional: Move image above text on mobile */
+  }
+}
