@@ -1,135 +1,179 @@
-/* making navigation bar stick to top and glass effect */
+
+:root 
+{
+  --header-height: 100px; /* Setting header height confirmed from "inspect" */
+}
+
+/* Sticky Navbar (Glass Effect) */
 .sticky-nav 
-    {
-        position: sticky;
-        top: 0;
-        z-index: 999;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.5rem 1.5rem;
-        backdrop-filter: blur(16px);
-        background: rgba(255, 255, 255, 0.5); /* translucent dark glass */
-        border-bottom: 1px solid rgba(255, 255, 255, 0.6);
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
+{
+  position: sticky;
+  top: 0;
+  min-height: var(--header-height); /* Ensures consistent height */
+  height: var(--header-height);
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5vw;
+  backdrop-filter: blur(3px);
+  background: rgba(29, 27, 27, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0);
+  box-sizing: border-box;
+  max-width: 1600px;
+  margin: 0 auto;
+  transition: 
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
 
-/* Logo alignment */
+/* Logo placement */
 .brand img 
-    {
-        display: block;
-    }
+{
+  display: block;
+  height: auto;
+  max-width: 100%; 
+}
 
-/* Contact me button position */
+/* Main Navigation Container */
 .main-nav 
-    {
-        display: flex;
-        align-items: center;
-        gap: 8rem;
-    }
+{
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+}
 
-/* Contact Me button appearance */
+/* Contact Button */
 .contact-button 
-    {
-        padding: 0.6rem 1.2rem;
-        background: linear-gradient(to right, #4f46e5, #9333ea);
-        color: white;
-        border: none;
-        border-radius: 6px;
-        font-weight: normal;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        text-decoration: none;
-    }
+{
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(to right, #4f46e5, #9333ea);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
 
-/* Hamburger menu layout */
+.contact-button:hover 
+{
+  transform: translateY(-2px);
+}
+
+/* Hamburger Menu (Pure CSS Toggle) */
 .hamburger-checkbox 
-    {
-        display: none;
-    }
+{
+  display: none;
+}
 
-.hamburger
-    {
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        gap: 1px;
-        margin-left: 1rem;
-    }
+.hamburger 
+{
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-left: 1rem;
+}
 
-/* Hamburger appearance */
 .hamburger span 
-    {
-        display: block;
-        width: 24px;
-        height: 3px;
-        background-color: #e03e32;
-        border-radius: 2px;
-    }
+{
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #e03e32;
+  border-radius: 2px;
+  transition: 
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
 
-/* Dropdown menu */
+/* Dropdown Menu */
 .navigation-menu 
-    {
-    position: absolute;
-    top: 70px;
-    right: 1rem;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 4px;
-    padding: 1rem;
-    list-style: none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition:
-        max-height 0.4s ease,
-        opacity 0.3s ease,
-        transform 0.3s ease,
-        visibility 0.3s ease;
-    }
+{
+  position: absolute;
+  top: 70px;
+  right: 0;
+  width: 10rem;
+  background: rgba(29, 27, 27, 0.8);
+  backdrop-filter: blur(16px);
+  border-radius: 4px;
+  padding: 1rem;
+  list-style: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition:
+    max-height 0.4s ease,
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s ease;
+}
 
-/* Show dropdown when hamburger is clicked */
-.hamburger-checkbox:checked + .hamburger + .navigation-menu 
-    {
-        max-height: 500px; 
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-    }
+/* Show Menu When Checkbox is Checked */
+.hamburger-checkbox:checked ~ .navigation-menu 
+{
+  max-height: 500px;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
 
-/* Navigation items */
-.navigation-menu li 
-    {
-        margin: 0.8rem 0;
-    }
-
-.navigation-menu li a 
-    {
-        display: block;
-        padding: 0.1rem;
-        color: #000000;
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.2s ease-in-out;
-        border-radius: 4px;
-    }
-
-.navigation-menu li a:hover 
-    {
-        color: #caa2ca;
-    }
-
+/* Hamburger Animation */
 .hamburger-checkbox:checked + .hamburger span:nth-child(1) 
 {
-    transform: rotate(45deg) translate(10px, 10px);
+  transform: rotate(45deg) translate(6px, 6px);
 }
 .hamburger-checkbox:checked + .hamburger span:nth-child(2) 
 {
-    opacity: 0;
+  opacity: 0;
 }
 .hamburger-checkbox:checked + .hamburger span:nth-child(3) 
 {
-    transform: rotate(-45deg) translate(10px, -10px);
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Navigation Links */
+.navigation-menu li 
+{
+  margin: 0.8rem 0;
+}
+
+.navigation-menu li a 
+{
+  display: block;
+  padding: 0.1rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  border-radius: 4px;
+}
+
+.navigation-menu li a:hover 
+{
+  color: #fc4e2b;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) 
+{
+  .main-nav 
+  {
+    gap: 2rem;
+  }
+  .navigation-menu 
+  {
+    width: 100%;
+    right: 0;
+    border-radius: 0;
+  }
 }

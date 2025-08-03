@@ -23,12 +23,11 @@
         <title>My portfolio | Paul Ochieng</title>
 
         <!-- CSS Imports -->
-        <link rel="stylesheet" href="styles/base.css">
-        <link rel="stylesheet" href="styles/components.css">
         <link rel="stylesheet" href="styles/nav-bar.css">
-        <link rel="stylesheet" href="styles/utilities.css">
+        <link rel="stylesheet" href="styles/main-body.css">
+        <link rel="stylesheet" href="styles/gen-aesthetics.css">
     </head>
-     <body id="top">
+    <body id="top">
 
         <!-- Main header and navigation -->
         <header class="sticky-nav">
@@ -45,8 +44,8 @@
                 <a href="#contacts-heading" class="contact-button">Contact Me</a></li>
 
                 <!-- Creating a hamburger menu -->
-                <input type="checkbox" id="hamburger-toggle" class="hamburger-checkbox">
-                <label for="hamburger-toggle" class="hamburger" aria-expanded="false" aria-label="Menu">
+                <input type="checkbox" id="hamburger-checkbox" class="hamburger-checkbox">
+                <label for="hamburger-checkbox" class="hamburger" aria-expanded="false" aria-label="Menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -63,117 +62,179 @@
             </nav>
         </header>
 
-        <!-- Main content of the webpage -->
-        <main role="main">
-            <!-- Section 1. Introduction/About Me -->
-            <section aria-labelledby="intro-heading">
-                <h2 id="intro-heading"></h2>
-                <h1>Portfolio?</h1>
-                <h1>Nah, this is Paul-folio.</h1>
-                <h3>Who am I, you ask?</h3>
-                <p>
-                    Hi, I’m Paul - a Kenyan full-stack software engineer based right here in Kenya. I’m soft-spoken, 
-                    easy to get along with, but don’t let that fool you. I’m sharp, creative, and deadly serious when it 
-                    comes to delivering clean, functional, and exciting code. Stick around to see what I’ve built, 
-                    how I think, and why I might just be the guy you want on your team.
-                </p>
-            </section>
+        <div class="scroll-wrapper">
+            <!-- Main content of the webpage -->
+            <main role="main">
+                <!-- Section 1. Introduction/About Me -->
+                <section aria-labelledby="intro-heading" class="visible">
+                    <div class="section-content">
+                        <h2 id="intro-heading"></h2>
+                        <h1>Portfolio?</h1>
+                        <h1>Nah, this is Paul-folio.</h1>
+                        <p>
+                            Hi, I’m Paul - a Kenyan full-stack software engineer based right here in Kenya. I’m soft-spoken, 
+                            easy to get along with, but don’t let that fool you. I’m sharp, creative, and deadly serious when it 
+                            comes to delivering clean, functional, and exciting code. Stick around to see what I’ve built, 
+                            how I think, and why I might just be the guy you want on your team.
+                        </p>
+                    </div>                    
+                </section>
 
-            <!-- Section 2. Technical Skills -->
-            <section aria-labelledby="skills-heading">
-                <h2 id="skills-heading">Skills</h2>
-                <h3>What’s in my toolbox?</h3>
-                <p>
-                    I work across the full stack - front-end, back-end, and everything in between. Here are some of the tools I’m fluent in:
-                </p>
-                    <ul>
-                        <li><strong>Languages:</strong> Java, Python, JavaScript</li>
-                        <li><strong>Frontend:</strong> HTML, CSS, JS</li>
-                        <li><strong>Backend:</strong> Node.js, Express</li>
-                        <li><strong>Databases:</strong> MongoDB, MySQL</li>
-                        <li><strong>Other tools:</strong> Git, GitHub, Postman, VS Code</li>
-                    </ul>
-                <p>
-                    I love learning new technologies, but I’m also big on mastering the fundamentals. Code that works is good - code that lasts is better.
-                </p>
-            </section>
+                <!-- Section 2. Technical Skills -->
+                <section aria-labelledby="skills-heading" class="visible">
+                    <div class="section-content">
+                        <h2 id="skills-heading">Skills</h2>
+                        <h3>What’s in my toolbox?</h3>
+                        <p>
+                            I work across the full stack - front-end, back-end, and everything in between. Here are some of the tools I’m fluent in:
+                        </p>
+                            <ul>
+                                <li><strong>Languages:</strong> Java, Python, JavaScript</li>
+                                <li><strong>Frontend:</strong> HTML, CSS, JS</li>
+                                <li><strong>Backend:</strong> Node.js, Express</li>
+                                <li><strong>Databases:</strong> MongoDB, MySQL</li>
+                                <li><strong>Other tools:</strong> Git, GitHub, Postman, VS Code</li>
+                            </ul>
+                        <p>
+                            I love learning new technologies, but I’m also big on mastering the fundamentals. Code that works is good - code that lasts is better.
+                        </p>
+                    </div>                
+                </section>
 
-            <!-- Section 3. Projects Portfolio -->
-            <section aria-labelledby="projects-heading">
-                <h2 id="projects-heading">Projects</h2>
-                <h3>What have I built?</h3>
-                <p>
-                    From side projects that scratched a curiosity itch to full-on applications that solved real problems, I’ve been busy. I’ve grown 
-                    from junior dev to someone who can plan, build, and ship solid products end-to-end. Take a scroll through my <a href="https://github.com/Polceze" 
-                    target="_blank" rel="noopener" title="Open my Github on a new tab">GitHub</a> - there’s a bit of everything: clean code, clever 
-                    solutions, and more than a few late nights behind it all.
-                </p>
-            </section>
+                <!-- Section 3. Projects Portfolio -->
+                <section aria-labelledby="projects-heading" class="visible">
+                    <div class="section-content">
+                        <h2 id="projects-heading">Projects</h2>
+                        <h3>What have I built?</h3>
+                        <p>
+                            From side projects that scratched a curiosity itch to full-on applications that solved real problems, I’ve been busy. I’ve grown 
+                            from junior dev to someone who can plan, build, and ship solid products end-to-end. Take a scroll through my <a href="https://github.com/Polceze" 
+                            target="_blank" rel="noopener" title="Open my Github on a new tab">GitHub</a> - there’s a bit of everything: clean code, clever 
+                            solutions, and more than a few late nights behind it all.
+                        </p>
+                    </div>                    
+                </section>
 
-            <!-- Section 4. Educational Background -->
-            <section aria-labelledby="education-heading">
-                <h2 id="education-heading">Education</h2>
-                <h3>From Physics to Full Stack</h3>
-                <p>
-                    Would you believe I didn’t study software development in university? 
-                    I hold a BSc. in Physics from JKUAT. My pivot into tech came through the <a href="https://www.powerlearnprojectafrica.org" 
-                    target="_blank" rel="noopener" title="Open Power Learn Project Africa website">PLP (Power Learn Project)</a> Software Engineering Scholarship - and 
-                    that decision changed everything. Since then, I’ve been deep in this world: learning, building, breaking stuff (on purpose), and building again.
-                </p>
-            </section>
+                <!-- Section 4. Educational Background -->
+                <section aria-labelledby="education-heading" class="visible">
+                    <div class="section-content">
+                        <h2 id="education-heading">Education</h2>
+                        <h3>From Physics to Full Stack</h3>
+                        <p>
+                            Would you believe I didn’t study software development in university? 
+                            I hold a BSc. in Physics from JKUAT. My pivot into tech came through the <a href="https://www.powerlearnprojectafrica.org" 
+                            target="_blank" rel="noopener" title="Open Power Learn Project Africa website">PLP (Power Learn Project)</a> Software Engineering Scholarship - and 
+                            that decision changed everything. Since then, I’ve been deep in this world: learning, building, breaking stuff (on purpose), and building again.
+                        </p>
+                    </div>                    
+                </section>
 
-            <!-- Section 5. Personal Interests -->
-            <section aria-labelledby="hobbies-heading">
-                <h2 id="hobbies-heading">Hobbies</h2>
-                <h3>When I’m not coding...</h3>
-                <p>All work and no play? Not me. Here’s how I keep life interesting:</p>
-                    <ul>
-                        <li><strong>Road trips</strong> – I love to drive. For me, a vacation starts when the engine turns on, not when I arrive.</li>
-                        <li><strong>Amateur piano</strong> – Self-taught and powered by instinct. I build chords by ear and it’s one of the most rewarding things I do.</li>
-                        <li>
-                            <strong>Curious browsing</strong> – I’m a YouTube deep diver. I’m into anything that questions what we think we know - from mind-bending theories 
-                            to the “Was the moon landing faked?” kind of debates. I don’t always believe them, but I’m always curious.
-                        </li>
-                    </ul>
-                <p>
-                    As you might’ve noticed, these hobbies aren’t just fun, they help me reset and come back to work with fresh ideas. They’ve taught me patience, creativity, 
-                    the value of consistent practice, and the habit of questioning common solutions - all of which come in handy when I’m deep in code, solving tough problems.
-                </p>    
-            </section>
+                <!-- Section 5. Personal Interests -->
+                <section aria-labelledby="hobbies-heading" class="visible">
+                    <div class="section-content">
+                        <h2 id="hobbies-heading">Hobbies</h2>
+                        <h3>When I’m not coding...</h3>
+                        <p>All work and no play? Not me. Here’s how I keep life interesting:</p>
+                            <ul>
+                                <li><strong>Road trips</strong> – I love to drive. For me, a vacation starts when the engine turns on, not when I arrive.</li>
+                                <li><strong>Amateur piano</strong> – Self-taught and powered by instinct. I build chords by ear and it’s one of the most rewarding things I do.</li>
+                                <li>
+                                    <strong>Curious browsing</strong> – I’m a YouTube deep diver. I’m into anything that questions what we think we know - from mind-bending theories 
+                                    to the “Was the moon landing faked?” kind of debates. I don’t always believe them, but I’m always curious.
+                                </li>
+                            </ul>
+                        <p>
+                            As you might’ve noticed, these hobbies aren’t just fun, they help me reset and come back to work with fresh ideas. They’ve taught me patience, creativity, 
+                            the value of consistent practice, and the habit of questioning common solutions - all of which come in handy when I’m deep in code, solving tough problems.
+                        </p>
+                    </div>                        
+                </section>
 
-            <!-- Section 6. Testimonials from peers -->
-            <section aria-labelledby="testimonials-heading">
-                <h2 id="testimonials-heading">Testimonials</h2>
-                <h3>Don’t just take my word for it</h3>
-                <p>
-                    What do my colleagues, clients, and collaborators say about me? Scroll through and hear it straight from them.
-                </p>
-            </section>
+                <!-- Section 6. Testimonials from peers -->
+                <section aria-labelledby="testimonials-heading" class="visible">
+                    <div class="section-content">
+                        <h2 id="testimonials-heading">Testimonials</h2>
+                        <h3>Don’t just take my word for it</h3>
+                        <p>
+                            What do my colleagues, clients, and collaborators say about me? Scroll through and hear it straight from them.
+                        </p>
+                    </div>                    
+                </section>
 
-            <!-- Section 7. My contacts -->\
-             <section aria-labelledby="contacts-heading">
-                <h2 id="contacts-heading">Contacts</h2>
-                <h3>Let’s talk, drop me a line</h3>
-                <p>
-                    Got a project, opportunity, or just want to say hi? Reach out!
-                </p>
-             </section>
-        </main>
+                <!-- Section 7. My contacts -->
+                <section aria-labelledby="contacts-heading">
+                    <div class="section-content">
+                        <h2 id="contacts-heading">Contacts</h2>
+                        <h3>Let’s talk, drop me a line</h3>
+                        <p>Got a project, opportunity, or just want to say hi? Reach out!</p>
+                        
+                        <!-- Contact Form -->
+                        <form 
+                            class="contact-form" 
+                            action="https://formspree.io/f/paulo.odera@gmail.com" 
+                            method="POST"
+                        >
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="name" 
+                                    required
+                                    aria-required="true"
+                                    placeholder="e.g. John Doe"
+                                >
+                            </div>
+                        
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    required
+                                    aria-required="true"
+                                    placeholder="e.g. john@example.com"
+                                >
+                            </div>
+                        
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    rows="5" 
+                                    required
+                                    aria-required="true"
+                                    placeholder="Hi Paul, I'd like to discuss..."
+                                ></textarea>
+                            </div>
+                        
+                            <button type="submit" class="submit-button">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </section>
+            </main>
+        </div>
         <footer>
-            <h3>Quick Links</h3>
-            <!-- Page footer with quick navigation and credits -->
-            <nav>
-                <a href="assets/Paul_Ochieng_CV.pdf" download title="Download my CV (PDF)">📄 Download My CV</a> &nbsp;&nbsp;|&nbsp;&nbsp;
-                <a href="." title="Scroll to the top">Home</a> &nbsp;&nbsp;|&nbsp;&nbsp;
-                <a href="#skills" title="Scroll to Skills">Skills</a> &nbsp;&nbsp;|&nbsp;&nbsp;
-                <a href="#projects" title="Scroll to Projects">Projects</a> &nbsp;&nbsp;|&nbsp;&nbsp;
-                <a href="#education" title="Scroll to Education">Education</a> &nbsp;&nbsp;|&nbsp;&nbsp;
-                <a href="#hobbies" title="Scroll to Hobbies">Hobbies</a> &nbsp;&nbsp;|&nbsp;&nbsp;
-                <a href="#testimonials" title="Scroll to Testimonials">Testimonials</a> &nbsp;&nbsp;|&nbsp;&nbsp;
-                <a href="https://academy.powerlearnprojectafrica.org" title="Open PLP Academy website on a new tab" target="_blank" rel="noopener">PLP Academy</a>
-            </nav>
-
-            <!-- Copyright -->
-            <p><small>&copy; 2025 Paul Ochieng. Built with HTML & CSS for PLP</small></p>
+            <div class="footer-content">
+                <h3>Quick Links</h3>
+                <!-- Page footer with quick navigation and credits -->
+                <nav>
+                    <a href="assets/Paul_Ochieng_CV.pdf" download title="Download my CV (PDF)">📄 Download My CV</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="." title="Scroll to the top">Home</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="#skills" title="Scroll to Skills">Skills</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="#projects" title="Scroll to Projects">Projects</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="#education" title="Scroll to Education">Education</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="#hobbies" title="Scroll to Hobbies">Hobbies</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="#testimonials" title="Scroll to Testimonials">Testimonials</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a href="https://academy.powerlearnprojectafrica.org" title="Open PLP Academy website on a new tab" target="_blank" rel="noopener">PLP Academy</a>
+                </nav>
+                <!-- Copyright -->
+                <p><small>&copy; 2025 Paul Ochieng. Built with HTML & CSS for PLP</small></p>
+            </div>            
         </footer>
     </body>
+</html>
