@@ -1,78 +1,84 @@
+/* Grid layout for the projects section */
 .projects-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+    display: grid;
+    grid-template-columns: 1fr; /* Single column by default */
+    gap: 2rem; /* Space between items */
 }
 
+/* Section heading with a decorative vertical line */
 #projects-heading {
-  position: relative;
-  padding-left: 1.5rem;
-  font-size: 2.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 2.5rem;
 }
 
 #projects-heading::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 60%;
-  width: 4px;
-  background: linear-gradient(to bottom, #4f46e5, #9333ea);
-  border-radius: 2px;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 60%;
+    width: 4px;
+    background: linear-gradient(to bottom, #4f46e5, #9333ea);
+    border-radius: 2px;
 }
 
+/* Container for project description text */
 .projects-text {
-  max-width: 800px;
-  margin: 0 auto;
-  animation: fadeInDown 0.8s ease-out;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInDown 0.8s ease-out; /* Slides down into view */
 }
 
+/* Wrapper for the project image */
 .projects-image {
-  display: flex;
-  justify-content: center;
-  animation: fadeInUp 0.8s ease-out;
+    display: flex;
+    justify-content: center;
+    animation: fadeInUp 0.8s ease-out; /* Slides up into view */
 }
 
+/* Image styling with rounded corners and shadow */
 .projects-image img {
-  max-width: 300px;
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Animations */
+/* Animation: fade in from above */
 @keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
+/* Animation: fade in from below */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Responsive adjustments */
+/* Adjustments for larger screens */
 @media (min-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-    align-items: flex-end; /* Aligns image to bottom */
-  }
-  
-  .projects-text {
-    margin-bottom: 3rem;
-  }
+    .projects-grid {
+        grid-template-columns: 1fr; /* Still one column, but layout may need adjustment later */
+        align-items: flex-end; /* Push image toward the bottom */
+    }
+
+    .projects-text {
+        margin-bottom: 3rem; /* Adds space below text */
+    }
 }

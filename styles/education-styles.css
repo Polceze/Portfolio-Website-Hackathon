@@ -1,118 +1,117 @@
-/* education-sec-styles.css */
-/* ===== EDUCATION SECTION ===== */
+/* Education Section Styles */
 .education-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: center;
-  margin: 2rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 2rem; /* Space between columns */
+    align-items: center; /* Vertically center items */
+    margin: 2rem 0;
 }
 
-/* ---- Heading Style (Matching Other Sections) ---- */
+/* --- Section Heading (similar style as other sections) --- */
 #education-heading {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 700;
-  color: #f0f0f0;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-  position: relative;
-  padding-left: 1.5rem;
-  opacity: 0;
-  animation: fadeInDown 0.8s ease-out 0.3s forwards;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem); /* Responsive scaling */
+    font-weight: 700;
+    color: #f0f0f0;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    position: relative; /* Needed for the gradient line */
+    padding-left: 1.5rem; /* Space for decorative line */
+    opacity: 0; /* Hidden before animation */
+    animation: fadeInDown 0.8s ease-out 0.3s forwards; /* Slide + fade in */
 }
 
 #education-heading::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 60%;
-  width: 4px;
-  background: linear-gradient(to bottom, #4f46e5, #9333ea);
-  border-radius: 2px;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); /* Vertically center the line */
+    height: 60%;
+    width: 4px;
+    background: linear-gradient(to bottom, #4f46e5, #9333ea); /* Blue to purple */
+    border-radius: 2px;
 }
 
-/* ---- Text Content ---- */
+/* --- Paragraph and Links inside the Education Text --- */
 .education-text p {
-  margin: 1rem 0;
-  line-height: 1.6;
+    margin: 1rem 0;
+    line-height: 1.6; /* Improves readability */
 }
 
 .education-text a {
-  color: #9333ea;
-  text-decoration: none;
-  transition: color 0.3s ease;
+    color: #9333ea;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth hover color change */
 }
 
 .education-text a:hover {
-  color: #4f46e5;
-  text-decoration: underline;
+    color: #4f46e5;
+    text-decoration: underline;
 }
 
-/* ---- Image Styling ---- */
+/* Image Container Styling */
 .education-image {
-  display: flex;
-  justify-content: flex-end; /* Align image to right */
-  animation: fadeInRight 0.8s ease-out;
+    display: flex;
+    justify-content: flex-end; /* Push image to the right */
+    animation: fadeInRight 0.8s ease-out; /* Slide in from right */
 }
 
 .education-image img {
-  max-width: 350px;
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Soft shadow */
+    transition: transform 0.3s ease; /* Smooth scale on hover */
 }
 
 .education-image img:hover {
-  transform: scale(1.02);
+    transform: scale(1.02); /* Slight zoom on hover */
 }
 
-/* ===== ANIMATIONS ===== */
+/* Animations */
 @keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(-15px); /* Slide in from above */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateX(20px); /* Slide in from the right */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-/* ===== RESPONSIVE ADJUSTMENTS ===== */
+/* Responsive Styles for Smaller Screens */
 @media (max-width: 768px) {
-  .education-grid {
-    grid-template-columns: 1fr;
-  }
+    .education-grid {
+        grid-template-columns: 1fr; /* Stack items vertically */
+    }
 
-  .education-image {
-    justify-content: center;
-    margin-top: 1.5rem;
-    order: -1; /* Move image above text on mobile */
-  }
-  
-  #education-heading {
-    padding-left: 1rem;
-    font-size: clamp(1.8rem, 6vw, 2.5rem);
-  }
-  
-  #education-heading::before {
-    height: 50%;
-    width: 3px;
-  }
+    .education-image {
+        justify-content: center; /* Center the image */
+        margin-top: 1.5rem;
+        order: -1; /* Show image above text on mobile */
+    }
+
+    #education-heading {
+        padding-left: 1rem; /* Slightly reduced for mobile */
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
+    }
+
+    #education-heading::before {
+        height: 50%;
+        width: 3px; /* Slightly thinner for smaller screens */
+    }
 }
